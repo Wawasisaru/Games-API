@@ -1,7 +1,9 @@
 // https://dummyjson.com/products
 
-function generateProductCards(data) {
+function generateProductCards(data, secondData) {
   const productContainer = document.getElementById("product-container");
+  const firstContainer = document.getElementById("firstContainer");
+  const secondContainer = document.getElementById("secondContainer");
 
   // iterate through the data and create a card for each product
   data.forEach((product) => {
@@ -12,15 +14,40 @@ function generateProductCards(data) {
     // Set the card content using the product data
     card.innerHTML = `
             <img src="${product.thumbnail}" alt="${product.name}" />
-            <h2>${product.title}</h2>
+            <div class='iconSection'>
+              <h2 class='title'>${product.title}</h2>
+              <div><i class="far fa-bookmark"></i></div>
+            </div>
             <div class='productPrice'>
-            <p>${product.price}</p>
+            <p class='price'>$ ${product.price}</p>
             <button>ADD TO CART</button>
             </div>
         `;
 
     // append the card to the product container
-    productContainer.appendChild(card);
+    firstContainer.appendChild(card);
+  });
+
+  secondData.forEach((product) => {
+    // create a card element
+    const card = document.createElement("div");
+    card.classList.add("product-card");
+
+    // Set the card content using the product data
+    card.innerHTML = `
+            <img src="${product.thumbnail}" alt="${product.name}" />
+            <div class='iconSection'>
+              <h2 class='title'>${product.title}</h2>
+              <div><i class="far fa-bookmark"></i></div>
+            </div>
+            <div class='productPrice'>
+            <p class='price'>$ ${product.price}</p>
+            <button>ADD TO CART</button>
+            </div>
+        `;
+
+    // append the card to the product container
+    secondContainer.appendChild(card);
   });
 }
 
@@ -29,11 +56,12 @@ function fetchProducts() {
     .then((response) => response.json())
     .then((data) => {
       // Get the first 8 products from the data
-      const returnedData = data.products.slice(0, 8);
+      const returnedData = data.products.slice(0, 4);
+      const secondData = data.products.slice(5, 9);
 
       // call the function to generate cards
-      generateProductCards(returnedData);
+      generateProductCards(returnedData, secondData);
     });
 }
 
-fetchProducts()
+fetchProducts();

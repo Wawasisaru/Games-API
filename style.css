@@ -1,17 +1,255 @@
-.product-card{
-    width: 300px;
-    height: 300px;
-    border: 2px solid red;
-    margin-bottom: 50px;
+*{
+    margin: 0;
+    padding: 0;
 }
-img{
-    width: 100%;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #dddddd;
 }
-.productPrice{
+.product-card {
+  width: 500px;
+  height: auto;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 2px #000000;
+  background-color: white;
+}
+ img {
+  width: 100%;
+  height: 200px;
+} 
+.productPrice {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  border: none;
+  background-color: rgb(253, 253, 75);
+}
+#firstContainer {
+  display: flex;
+  gap: 20px;
+}
+#secondContainer {
+  display: flex;
+  gap: 20px;
+}
+.price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 14px;
+}
+.iconSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.fa-bookmark {
+  display: block;
+  font-size: 1.2rem;
+}
+/* ---------------------navigation bar----------------------- */
+.nav-bar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 10px;
+    padding-top: 3%;
+
+  }
+  
+  .nav-bar a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  .nav-bar a:hover {
+    color: yellow;
+  }
+  
+  /* ------------------------------------navigation ----------------- */
+  #signup {
+    background-color: yellow; 
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid yellow;
+  }
+  
+  .nav-bar .btn-sign:hover {
+    background-color: #FF8C00; /* Lighter yellow */
+  }
+  #gad{
+    color:yellow;
+  }
+  /* ----------------------search input------------------------------ */
+  #search-section {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  #search-input {
+    flex: 1;
+    padding: 5px;
+    border: 2px solid grey;
+    outline: none;
+    font-size: 16px;
+  }
+  /* ---------------------------homepage------------ */
+  .home-page{
+    height: 90vh;
+    background-image:url("https://res.cloudinary.com/djz4lxe3f/image/upload/c_scale,h_500,w_1000/v1685477347/Hotel-booking/online-shopping-concept-about-electronics-gadgets-modern-promotion-period-new-models-consist-phone-vr-headphone-with-drone-credit-card-green-background-realistic-3d-rendering_156429-3714_l9qt6u.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* -------------------title---------------- */
+  #text{
+    font-size: 48px;
+    color: rgb(14, 14, 58);
+    padding: 66px;
+  }
+  #paragraph{
+    padding: 5px 60px;
+    font-size: 15px;
+    color: rgb(20, 20, 56);
+  }
+  /* --------------------home button------------- */
+  #now {
+    background-color: yellow; 
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid yellow;
+  }
+  
+  .nav-bar .now:hover {
+    background-color: #FF8C00;
+  }
+  #more {
+    background-color: transparent; 
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid yellow;
+  }
+  
+  .nav-bar .more:hover {
+    background-color: #FF8C00; /* Lighter yellow */
+  }
+  #home-button{
+    display: flex;
+    padding: 80px;
+    padding-left: 60px;
+  }
+  /* -------------------ICONS---------------------------------------- */
+  .icon-middle{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+  #icon-o img{
+    margin: 1.8%;
+    background-color: whitesmoke;
+    border-radius: 9px;
+  }
+  /* -------------------------- */
+  .images-page{
+    display: flex;
+  }
+#image-one img{
+    height: 90%;
+    width:90%;
+    margin: 5%;
 }
-button{
-    border: none;
-    
+#image-three img{
+    height: 90%;
+    width:90%;
+}
+/* -----------------------footer----------------------- */
+
+footer {
+  background-color: #030303;
+  padding: 45px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  justify-content: space-between;
+  color: #dddddd;
+}
+
+.footer-column {
+  flex-basis: 20%;
+  text-align: center;
+  padding: 10px;
+}
+h3{
+  font-size: 40px;
+}
+li{
+  font-size: 15px;
+}
+/* -------------------------Subscribe--------------------------- */
+#news{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(224, 224, 224);
+  padding: 80px;
+}
+#sub{
+  font-size: 27px;
+}
+#email{
+  background-color: yellow; 
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid yellow;
+}
+/* ---------------------TESTIMONALS------------------------------- */
+#picture img{
+  height: 90vh;
+  width: 90vh;
+  box-sizing: border-box;
+  /* background-color: rgba(194, 189, 189, 0.432); */
+  border-radius: 9px;
+  padding-top: 30px;
+}
+#Testimonals{
+  display: flex;
+  justify-content: space-between;
+}
+#graph{
+  padding-top: 100px;
+  font-size: 20px;
+  /* width: 50vh;
+   */
+   margin: 25px;
+  }
+#test{
+  text-align: center;
+  font-size: 40px;
+}
+#mini{
+  text-align: center;
+  margin-left: 9%;
+  padding-top: 30px;
+  font-size: 20px;
 }
